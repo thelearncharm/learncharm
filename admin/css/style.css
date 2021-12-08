@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+body,html{
+    line-height: 1.8;
+    font-family:'Roboto', sans-serif;
+    color: #555e58;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4{
+    font-weight: 400;
+    line-height: 1.5em;
+}
+p{
+    font-size: 15px;
+    margin: 12px 0 0 ;
+    line-height: 24px;
+}
+a{
+    color: #333;
+    font-weight: 400;
+}
+button:focus{
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+button{
+    cursor: pointer;
+}
+ul, ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a,a:hover, a:focus{
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* material icos style */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+  /* sidebar style */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    bottom: 0;
+    background: #f1fff9;
+}
+.sidebar .logo-details{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.sidebar .logo-details .hide-logo{
+    width: 30px;
+   
+    margin-top: 20px;
+}
+.sidebar .logo-details .show-logo{
+    width: 170px;
+    margin-left: 20px;
+}
+.sidebar .nav-links{
+    height: 30rem;
+    padding-top: 30%;
+    overflow-y: auto;
+}
+.sidebar .nav-links::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 50px;
+    background: #00C782;
+}
+.sidebar .nav-links li{
+list-style: none;
+position: relative;
+transition: all .2s;
+}
+.sidebar .nav-links li i{
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: #00C782;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+.sidebar .nav-links li.showMenu i.arrow{
+    transform: rotate(-180deg);
+}
+.sidebar .nav-links li a{
+    display: flex;
+    align-items: center;
+    
+}
+.sidebar .nav-links li:hover{
+    background: #ccffed;
+    border-radius: 20px;
+}
+.sidebar .nav-links li a .link_name{
+    font-size: 18px;
+    font-weight: 400;
+    color: #00C782;
+}
+.sidebar .nav-links li .icon-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar .nav-links li .sub-menu{
+    margin-top: -10px;
+    padding: 6px 6px 14px 80px;
+    background:#ccffed;
+    border-radius: 20px;
+    display: none;
+}
+.sidebar .nav-links li.showMenu .sub-menu{
+    display: block;
+    
+}
+.sidebar.close .nav-links li .sub-menu{
+    position: absolute;
+    left: 100%;
+    
+}
+.sidebar .profile-details{
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ccffed;
+    border-radius: 16px;
+    margin-left: 10px;
+
+}
+.sidebar .profile-details img{
+    width: 52px;
+    margin: 0px 14px  12px;
+    background: #ccffed;
+    padding: 10px;
+    border-radius: 20px;
+}
+.sidebar .profile-details .profile-content{
+    display: flex;
+    align-items: center;
+}
+.sidebar .profile-details .profile_name{
+    color: #00C782;
+    font-family: poppins;
+    font-size: 16px;
+    font-weight: 600;
+}
+.sidebar .profile-details .role{
+    font-size: 14px;
+    font-family: poppins;
+}
+
+  /* main content */
+  #content{
+      position: relative;
+      z-index: 400;
+      transition: all 0.3s;
+      background-color: #eee;
+      
+  }
+  .top-navbar{
+      width: 100%;
+      z-index: 9;
+      position: relative;
+  }
+  .main-content{
+      pointer-events: all;
+      padding: 10px 20px 0px 20px;
+      position: relative;
+      width: 100%;
+
+  }
+  .navbar{
+      background-color: #00C782;
+      color: #fff;
+
+  }
+  .navbar-brand{
+      color: #fff;
+
+  }
+  .navbar button{
+      background-color: transparent;
+      border: none;
+
+  }
+  .navbar button span{
+      color: #fff;
+
+  }
+  #sidebarcollapse{
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      line-height: 45px;
+      margin-right: 20px;
+      border: none;
+      color: #fff;
+      background-color: rgba(0, 0, 0,0.09);
+  }
+  #sidebarcollapse span{
+      margin: 9px;
+      padding: 0px;
+
+  }
+  .navbar-nav>li.active{
+      color: #fff;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0,0.08);
+  }
+
+  /* card design */
+  .card {
+      margin: 10px 0px;
+      /* border-radius: 0px!important; */
+      display: inline-block;
+      position: relative;
+      border: none;
+      width: 100%;
+      margin: 15px 0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0,0.08);
+      border-radius: 6px;
+      color: rgba(0, 0, 0,0.87);
+  }
+
+  .card-stats .card-header{
+      float: left;
+      text-align: center;
+
+  }
+  .card .card-header{
+      padding: 15px 20px 0px;
+      z-index: 3;
+      background-color: #fff;
+      border-radius: none;
+  }
+
+  .card .card-footer .stats .material-icons{
+    position: relative;
+    top: 4px;
+    font-size: 16px;
+  }
+  .card-stats .card-header span{
+      font-size: 36px;
+      line-height: 56px;
+      width: 56px;
+      height: 56px;
+      color: #00C782;
+  }
+  .card .card-footer{
+      margin: 0 7px 0px;
+      padding-top: 10px;
+      background-color: #fff;
+      border-top: 1px solid #eee;
+  }
+  .card-stats .card-content{
+      text-align: right;
+      padding-top: 10px;
+  }
+  .card .card-content{
+      padding: 15px 20px;
+      position: relative;
+
+  }
+  /* footer */
+  .footer{
+      border-top: 1px solid #e7e7e7;
+  }
+  footer{
+      padding: 10px 0;
+      position: relative;
+      width: 100%;
+
+  }
+  footer ul li{
+      display: inline-block;
+  }
+  footer ul li a{
+      color: inherit;
+      padding: 15px;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      display: block;
+      position: relative;
+
+  }
+  footer .copyright{
+      padding: 15px;
+      font-size: 14px;
+      margin: 0%;
+
+  }
+
+  /* other */
+  #sidebar.show-nav, .body-overlay.show-nav{
+      transform: translateX(0%);
+      opacity: 1;
+      display: block;
+      visibility: visible;
+      z-index: 15;
+  }
+  .dropdown-menu{
+      border: 0;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0,0.08);
+      transform: translate3d(0, -20px, 0);
+      visibility: hidden;
+      transition: all 150ms linear;
+      display: block;
+      min-width: 15rm;
+
+  }
+  #content{
+      width: calc(100% - 261px);
+      position: relative;
+      background-color: #eeeeee;
+      float: right ;
+      transition: all 0.3s;
+  }
+
+
+  /* add student */
+  .form{
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .form .form-head{
+      margin-bottom: 10px;
+  }
+
+  .form .form-main{
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 10px 10px 10px 2px #d6ecff;
+      padding: 20px;
+      margin-bottom: 40px;
+      
+  }
+  .form .form-main form .input{
+    padding: 10px;
+
+  }
+  .form .form-main form .input input{
+      width: 20rem;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #00C782;
+  }
+  .form .form-main .select{
+    padding: 10px;
+
+  }
+  .form .form-main .select select{
+      width: 20rem;
+      margin-left: 1px;
+      height: 30px;
+      background: #00C782;
+      border: none;
+      outline: none;
+      color: #fff;
+
+  }
+
+.form .form-main .submit-btn input{
+    color: #fff;
+    background: #00C782;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+   width: 100%;
+   height: 40px;
+   transition: all 0.2s ease;
+
+}
+.form .form-main .submit-btn input:hover{
+    background: transparent;
+    border: 2px solid #00C782;
+    color: #00C782;
+}
