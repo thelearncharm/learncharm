@@ -105,14 +105,7 @@
                    
 
 
-    <div id="piechart_3d" style="width: 500px; height: 300px; background:transparent;"></div>
-                </div>
-            </div>
-
-          
-        </div>
-    </div>
-
+  
    
 <?php include './footer.php'; ?>
         <!-- charts js -->

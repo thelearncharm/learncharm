@@ -6,7 +6,7 @@
     </div>
     <ul class="nav-links">
         <li>
-            <a href="#">
+            <a href="./index.php">
             <i class='bx bx-grid-alt'></i>
             <span class="link_name">Dashboard</span>
         </a>
@@ -21,7 +21,7 @@
         <i class='bx bxs-chevron-down arrow'></i>
         </div>
         <ul class="sub-menu">
-            <li><a href="#">Add Student</a></li>
+            <li><a href="./add-stud.php">Add Student</a></li>
             <li><a href="#">Show Student</a></li>
         </ul>
     </li>
@@ -30,13 +30,13 @@
         <div class="icon-links">
         <a href="#">
         <i class='bx bxs-user'></i>
-            <span class="link_name">Teachers</span>
+            <span class="link_name">Faculty</span>
         </a>
         <i class='bx bxs-chevron-down arrow'></i>
         </div>
         <ul class="sub-menu">
-            <li><a href="#">Add Student</a></li>
-            <li><a href="#">Show Student</a></li>
+            <li><a href="./add-faculty.php">Add Faculty</a></li>
+            <li><a href="#">Show Faculty</a></li>
         </ul>
     </li>
     <li>
@@ -48,7 +48,7 @@
         <i class='bx bxs-chevron-down arrow'></i>
         </div>
         <ul class="sub-menu">
-            <li><a href="#">Add Course</a></li>
+            <li><a href="./add-course.php">Add Course</a></li>
             <li><a href="#">Show Course</a></li>
         </ul>
     </li>
@@ -113,7 +113,8 @@
                 <div class="profile_name">John Doe</div>
                 <div class="role">Admin</div>
             </div>
-            <i class='bx bx-log-out'></i>
+            <a href="#">
+            <i class='bx bx-log-out'></i></a>
         </div>
     </li>
 </ul>
