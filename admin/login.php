@@ -1,6 +1,11 @@
 <?php
-include "./dbcon.php";
-    
+    // session_start();
+    include "./dbcon.php";
+    // $_SESSION['loggedIn'] = "";
+    if(isset($_SESSION['loggedIn']))
+    {
+        echo "<script>window.location.href = './index.php'</script>";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -145,12 +150,15 @@ if(isset($_POST['signupBtn']))
         {
            
             $_SESSION['loggedIn'] = true;
+            $_SESSION['check'] = true;
             $_SESSION['username'] = $username;
             // header("location:./index.php");
             echo "<script>window.location.href = './index.php'</script>";
         }
         else{
+            $_SESSION['loggedIn'] = false;
             echo "failed";
         }
     }
+    
 ?>
